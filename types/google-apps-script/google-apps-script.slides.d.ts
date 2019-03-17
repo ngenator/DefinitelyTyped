@@ -159,14 +159,10 @@ declare namespace GoogleAppsScript {
       getSolidFill(): SolidFill;
       getType(): FillType;
       isVisible(): boolean;
-      setSolidFill(color: Color): void;
-      setSolidFill(color: Color, alpha: Number): void;
-      setSolidFill(red: Integer, green: Integer, blue: Integer): void;
-      setSolidFill(red: Integer, green: Integer, blue: Integer, alpha: Number): void;
-      setSolidFill(hexString: string): void;
-      setSolidFill(hexString: string, alpha: Number): void;
-      setSolidFill(color: ThemeColorType): void;
-      setSolidFill(color: ThemeColorType, alpha: Number): void;
+      setSolidFill(color: Color, alpha?: Number): void;
+      setSolidFill(red: Integer, green: Integer, blue: Integer, alpha?: Number): void;
+      setSolidFill(hexString: string, alpha?: Number): void;
+      setSolidFill(color: ThemeColorType, alpha?: Number): void;
       setTransparent(): void;
     }
 
@@ -419,14 +415,10 @@ declare namespace GoogleAppsScript {
     export interface LineFill {
       getFillType(): LineFillType;
       getSolidFill(): SolidFill;
-      setSolidFill(color: Color): void;
-      setSolidFill(color: Color, alpha: Number): void;
-      setSolidFill(red: Integer, green: Integer, blue: Integer): void;
-      setSolidFill(red: Integer, green: Integer, blue: Integer, alpha: Number): void;
-      setSolidFill(hexString: string): void;
-      setSolidFill(hexString: string, alpha: Number): void;
-      setSolidFill(color: ThemeColorType): void;
-      setSolidFill(color: ThemeColorType, alpha: Number): void;
+      setSolidFill(color: Color, alpha?: Number): void;
+      setSolidFill(red: Integer, green: Integer, blue: Integer, alpha?: Number): void;
+      setSolidFill(hexString: string, alpha?: Number): void;
+      setSolidFill(color: ThemeColorType, alpha?: Number): void;
     }
 
     /**
@@ -603,8 +595,7 @@ declare namespace GoogleAppsScript {
       getObjectId(): string;
       getPageElementById(id: string): PageElement;
       getPageElements(): PageElement[];
-      getPlaceholder(placeholderType: PlaceholderType): PageElement;
-      getPlaceholder(placeholderType: PlaceholderType, placeholderIndex: Integer): PageElement;
+      getPlaceholder(placeholderType: PlaceholderType, placeholderIndex?: Integer): PageElement;
       getPlaceholders(): PageElement[];
       getShapes(): Shape[];
       getSheetsCharts(): SheetsChart[];
@@ -627,8 +618,7 @@ declare namespace GoogleAppsScript {
       getObjectId(): string;
       getPageElementById(id: string): PageElement;
       getPageElements(): PageElement[];
-      getPlaceholder(placeholderType: PlaceholderType): PageElement;
-      getPlaceholder(placeholderType: PlaceholderType, placeholderIndex: Integer): PageElement;
+      getPlaceholder(placeholderType: PlaceholderType, placeholderIndex?: Integer): PageElement;
       getPlaceholders(): PageElement[];
       getShapes(): Shape[];
       getSheetsCharts(): SheetsChart[];
@@ -636,8 +626,7 @@ declare namespace GoogleAppsScript {
       getTables(): Table[];
       getVideos(): Video[];
       getWordArts(): WordArt[];
-      replaceAllText(findText: string, replaceText: string): Integer;
-      replaceAllText(findText: string, replaceText: string, matchCase: boolean): Integer;
+      replaceAllText(findText: string, replaceText: string, matchCase?: boolean): Integer;
     }
 
     /**

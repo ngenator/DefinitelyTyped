@@ -20,8 +20,7 @@ declare namespace GoogleAppsScript {
       getAs(contentType: string): Base.Blob;
       getBlob(): Base.Blob;
       getContent(): Byte[];
-      getContentText(): string;
-      getContentText(charset: string): string;
+      getContentText(charset?: string): string;
       getHeaders(): Object;
       getResponseCode(): Integer;
     }

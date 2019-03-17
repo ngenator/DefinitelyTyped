@@ -20,8 +20,7 @@ declare namespace GoogleAppsScript {
       getKeys(): string[];
       getProperties(): Object;
       getProperty(key: string): string | null;
-      setProperties(properties: Object): Properties;
-      setProperties(properties: Object, deleteAllOthers: boolean): Properties;
+      setProperties(properties: Object, deleteAllOthers?: boolean): Properties;
       setProperty(key: string, value: string): Properties;
     }
 
@@ -57,8 +56,7 @@ declare namespace GoogleAppsScript {
       getKeys(): string[];
       getProperties(): Object;
       getProperty(key: string): string | null;
-      setProperties(properties: Object): ScriptProperties;
-      setProperties(properties: Object, deleteAllOthers: boolean): ScriptProperties;
+      setProperties(properties: Object, deleteAllOthers?: boolean): ScriptProperties;
       setProperty(key: string, value: string): ScriptProperties;
     }
 
@@ -74,8 +72,7 @@ declare namespace GoogleAppsScript {
       getKeys(): string[];
       getProperties(): Object;
       getProperty(key: string): string | null;
-      setProperties(properties: Object): UserProperties;
-      setProperties(properties: Object, deleteAllOthers: boolean): UserProperties;
+      setProperties(properties: Object, deleteAllOthers?: boolean): UserProperties;
       setProperty(key: string, value: string): UserProperties;
     }
 

@@ -15,15 +15,13 @@ declare namespace GoogleAppsScript {
       getAs(contentType: string): Blob;
       getBytes(): Byte[];
       getContentType(): string;
-      getDataAsString(): string;
-      getDataAsString(charset: string): string;
+      getDataAsString(charset?: string): string;
       getName(): string;
       isGoogleType(): boolean;
       setBytes(data: Byte[]): Blob;
       setContentType(contentType: string): Blob;
       setContentTypeFromExtension(): Blob;
-      setDataFromString(string: string): Blob;
-      setDataFromString(string: string, charset: string): Blob;
+      setDataFromString(string: string, charset?: string): Blob;
       setName(name: string): Blob;
       getAllBlobs(): Blob[];
     }
@@ -84,11 +82,9 @@ declare namespace GoogleAppsScript {
      */
     export interface Browser {
       Buttons: typeof ButtonSet;
-      inputBox(prompt: string): string;
-      inputBox(prompt: string, buttons: ButtonSet): string;
+      inputBox(prompt: string, buttons?: ButtonSet): string;
       inputBox(title: string, prompt: string, buttons: ButtonSet): string;
-      msgBox(prompt: string): string;
-      msgBox(prompt: string, buttons: ButtonSet): string;
+      msgBox(prompt: string, buttons?: ButtonSet): string;
       msgBox(title: string, prompt: string, buttons: ButtonSet): string;
     }
 
@@ -249,13 +245,11 @@ declare namespace GoogleAppsScript {
     export interface Ui {
       Button: typeof Button;
       ButtonSet: typeof ButtonSet;
-      alert(prompt: string): Button;
-      alert(prompt: string, buttons: ButtonSet): Button;
+      alert(prompt: string, buttons?: ButtonSet): Button;
       alert(title: string, prompt: string, buttons: ButtonSet): Button;
       createAddonMenu(): Menu;
       createMenu(caption: string): Menu;
-      prompt(prompt: string): PromptResponse;
-      prompt(prompt: string, buttons: ButtonSet): PromptResponse;
+      prompt(prompt: string, buttons?: ButtonSet): PromptResponse;
       prompt(title: string, prompt: string, buttons: ButtonSet): PromptResponse;
       showModalDialog(userInterface: Object, title: string): void;
       showModelessDialog(userInterface: Object, title: string): void;
@@ -306,16 +300,12 @@ declare namespace GoogleAppsScript {
      *     }
      */
     export interface console {
-      error(): void;
-      error(formatOrObject: Object, ...values: Object[]): void;
-      info(): void;
-      info(formatOrObject: Object, ...values: Object[]): void;
-      log(): void;
-      log(formatOrObject: Object, ...values: Object[]): void;
+      error(formatOrObject?: Object, ...values: Object[]): void;
+      info(formatOrObject?: Object, ...values: Object[]): void;
+      log(formatOrObject?: Object, ...values: Object[]): void;
       time(label: string): void;
       timeEnd(label: string): void;
-      warn(): void;
-      warn(formatOrObject: Object, ...values: Object[]): void;
+      warn(formatOrObject?: Object, ...values: Object[]): void;
     }
 
   }

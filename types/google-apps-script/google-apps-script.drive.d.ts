@@ -248,8 +248,7 @@ declare namespace GoogleAppsScript {
       addViewer(user: Base.User): Folder;
       addViewers(emailAddresses: string[]): Folder;
       createFile(blob: Base.BlobSource): File;
-      createFile(name: string, content: string): File;
-      createFile(name: string, content: string, mimeType: string): File;
+      createFile(name: string, content: string, mimeType?: string): File;
       createFolder(name: string): Folder;
       getAccess(email: string): Permission;
       getAccess(user: Base.User): Permission;
